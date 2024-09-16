@@ -4,7 +4,7 @@ const Collection = () => {
   return (
     <div>
       
-    </div>
+    </div> 
   )
 }
 
