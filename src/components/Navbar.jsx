@@ -6,8 +6,7 @@ const Navbar = () => {
     const [showMenu,setShowMenu] =  useState(false)
   return (
     <div className='flex items-center justify-between py-5 font-medium'>
-      <h1 className='font-bold text-xl'>TrendyCart</h1>
-
+      <Link to="/"><h1 className='font-bold text-xl'><span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>Trendy</span>Cart</h1></Link>
       <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
         <NavLink to="/" className="flex flex-col items-center gap-1">
             <p>Home</p>
