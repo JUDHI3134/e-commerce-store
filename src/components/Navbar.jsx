@@ -38,14 +38,18 @@ const Navbar = () => {
       <div className='flex items-center gap-6'>
         <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer' alt="" />
         <div className="group relative">
-            <Link to="/login"><img src={assets.profile_icon} className='w-5 cursor-pointer' alt="" /></Link>
-            <div className='hidden group-hover:block absolute dropdown-menu right-0 pt-4'>
+            
+            <img onClick={()=>token ? null : navigate("/login")} src={assets.profile_icon} className='w-5 cursor-pointer' alt="" />
+            {/* dropdown menu  */}
+            {
+                token && <div className='hidden group-hover:block absolute dropdown-menu right-0 pt-4'>
                 <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
                     <p className='cursor-pointer hover:text-black'>My Profile</p>
-                    <p className='cursor-pointer hover:text-black'>Orders</p>
+                    <p onClick={()=>navigate("/orders")} className='cursor-pointer hover:text-black'>Orders</p>
                     <p onClick={logout} className='cursor-pointer hover:text-black'>Logout</p>
                 </div>
             </div>
+            }
         </div>
         <Link to={"/cart"} className='relative'>
             <img src={assets.cart_icon} className='w-5 min-w-5' alt="" />
