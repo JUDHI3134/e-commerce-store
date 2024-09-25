@@ -1,23 +1,18 @@
-<<<<<<< HEAD
+
 import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import axios from 'axios'
 import { toast } from 'react-toastify'
-=======
-import React, { useContext, useState } from 'react'
-import { ShopContext } from '../context/ShopContext'
->>>>>>> cd006e5440e3166a04e95d212651c15a7428a1f9
+
 
 const Login = () => {
   const [currentState, setCurrentState] = useState("Sign Up")
   const { navigate,backendUrl,token,setToken} = useContext(ShopContext)
-<<<<<<< HEAD
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-=======
->>>>>>> cd006e5440e3166a04e95d212651c15a7428a1f9
+
 
   const onSubmitHandler = async (event) =>{
     event.preventDefault();
